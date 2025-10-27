@@ -1,0 +1,121 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  /* Form Groups */
+  .input-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background: white;
+    padding: 0 4px;
+  }
+  
+  /* Floating label */
+  .input-group input:focus + label,
+  .input-group input:not(:placeholder-shown):valid + label {
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    color: #007BFF;
+  }
+  
+  /* Valid */
+  .input-group input:valid {
+    border-color: #28a745;
+  }
+  
+  .input-group input:invalid:focus {
+    border-color: #dc3545;
+  }
+  
+  /* Validation messages */
+  .message {
+    display: none;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #dc3545;
+  }
+  
+  /* Show message on invalid input after focus */
+  .input-group input:invalid:focus ~ .message {
+    display: block;
+  }
+  
+  /* Buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #5a6268;
+  }
+  

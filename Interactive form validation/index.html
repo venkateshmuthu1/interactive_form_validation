@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Form Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Register</h1>
+    <form novalidate>
+      <!-- Name -->
+      <div class="input-group">
+        <input type="text" name="name" id="name" required>
+        <label for="name">Name *</label>
+        <span class="message">Please enter your name</span>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <input type="email" name="email" id="email" required>
+        <label for="email">Email *</label>
+        <span class="message">Please enter a valid email</span>
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <input type="password" name="password" id="password" required minlength="6">
+        <label for="password">Password *</label>
+        <span class="message">Min. 6 characters</span>
+      </div>
+
+      <!-- Zip Code -->
+      <div class="input-group">
+        <input type="text" name="zip" id="zip" required pattern="\d{5}">
+        <label for="zip">Zip Code *</label>
+        <span class="message">5-digit zip code</span>
+      </div>
+
+      <!-- Submit -->
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
